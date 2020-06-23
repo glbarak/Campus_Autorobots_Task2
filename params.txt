@@ -1,0 +1,47 @@
+[ALL]
+#auto or manual mode
+auto = 1
+#pixel size in cm (task instructions - 2.5)
+pix = 2.5
+#inital drone coordinates in cm
+lat = 200                              
+long = 200
+#initial drone heading in degrees. 0 = East (or Right) increasing CCW
+heading = 270
+#drone size (safety perimeter) in cm (task instructions - 15)
+drone_size = 15
+#maze image file path. path is relative to program location
+maze_image = backgrounds/map6.png 
+#simulation timme limit in minutes (task instructions - 5)
+time_limit = 5
+#amount of rotation per key press / control loop (manual/auto) in degrees
+d_rotate = 22.5
+#amount of linear advance per key press in manual mode (cm)
+d_linear = 10
+#direction of side range sensor from forward centerline
+side_sense_dir = 45
+#maximum range sensor detection in meters (task instructions - 3)
+max_range = 3
+
+[AUTO]
+#maimum speed meter/sec (task instructions - 2)
+max_speed = 2
+#acceleration m / sec*sec (task instructions - 1)
+acc = 1
+# distance sensors:
+# the following two lines determine the control loop delay
+# e.g - 5 sensors @ 100 samples per second = 20 samples per second
+# which is 50 ms per each control loop
+# total sampling rate in samples/sec (task instructions - 100)
+samp_rate = 100
+# number of sensors
+sens_num = 3
+# sensors inaccuracy in +/- cm (task instructions 5)
+range_noise = 5
+# sensors no reading rate (task instruction 0.05 or 1 out of 20)
+no_range = 20
+# a safety margin from the walls  in terms of control loops (will be multilied by linear movemet per loop)
+margin = 6
+# Gyro drift degrees/minute (task instructions 2-5) 
+gyro_drift = 5
+# Optical flow sensor accuracy 2-5% (TBD)
